@@ -6,9 +6,16 @@ import (
 	"os"
 	"regexp"
 	"strings"
+
+	TicketModel "github.com/iMbGenom/gorilla/src/models/ticket"
 )
 
+var action string
+var subject string
+
 func main() {
+	// fmt.Println(os.Args[1]) // get exit code
+
 	/* Read File Input With Argument*/
 	// count if with argument
 	if len(os.Args) > 0 {
@@ -42,8 +49,27 @@ func main() {
 		} else {
 			// if not .txt file
 			// fmt.Println("Single Command")
-			data := os.Args[1] + " " + os.Args[2]
-			fmt.Println(data)
+			// data := os.Args[1] + " " + os.Args[2] + " " + os.Args[3]
+			action = os.Args[1]
+
+			switch action {
+			case "park":
+				fmt.Println("CreateNew Park")
+				createTicket := TicketModel.CreateNew(os.Args[2])
+				fmt.Println(createTicket)
+			case "leave":
+				fmt.Println("exe 2")
+			case "status":
+				fmt.Println("exe 3")
+			case "registration_numbers_for_cars_with_colour":
+				fmt.Println("exe 3")
+			case "slot_numbers_for_cars_with_colour":
+				fmt.Println("exe 3")
+			case "slot_number_for_registration_number":
+				fmt.Println("exe 3")
+			}
+			// ticket.CreateNew()
+			// fmt.Println(data)
 		}
 	} else {
 		fmt.Println(os.Args)
