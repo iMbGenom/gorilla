@@ -7,6 +7,7 @@ import (
 	"regexp"
 	"strings"
 
+	"github.com/iMbGenom/gorilla/src/helpers"
 	TicketModel "github.com/iMbGenom/gorilla/src/models/ticket"
 )
 
@@ -53,20 +54,26 @@ func main() {
 			action = os.Args[1]
 
 			switch action {
+			case "create_parking_lot":
+				fmt.Println("create_parking_lot")
+				helpers.CreateFile()
 			case "park":
-				fmt.Println("CreateNew Park")
+				fmt.Println("parkx")
 				createTicket := TicketModel.CreateNew(os.Args[2])
 				fmt.Println(createTicket)
 			case "leave":
-				fmt.Println("exe 2")
+				fmt.Println("leavex")
 			case "status":
-				fmt.Println("exe 3")
+				fmt.Println("statusx")
 			case "registration_numbers_for_cars_with_colour":
-				fmt.Println("exe 3")
+				fmt.Println("registration_numbers_for_cars_with_colourx")
 			case "slot_numbers_for_cars_with_colour":
-				fmt.Println("exe 3")
+				fmt.Println("slot_numbers_for_cars_with_colourx")
 			case "slot_number_for_registration_number":
-				fmt.Println("exe 3")
+				fmt.Println("slot_number_for_registration_numberx")
+			case "exit":
+				fmt.Println("exitx")
+				helpers.DeleteFile()
 			}
 			// ticket.CreateNew()
 			// fmt.Println(data)
