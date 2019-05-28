@@ -20,9 +20,11 @@ func main() {
 	/** Deck to string */
 	// greeting := "Hi there!"
 	// fmt.Println([]byte(greeting))
-	cards := newDeck()
+	// cards := newDeck()
 	// fmt.Println(cards.toString())
-	cards.saveToFile("my_cards.txt")
+	// cards.saveToFile("my_cards.txt")
+	cards := newDeckFromFile("my_card.txt")
+	cards.print()
 }
 
 // func newCard() string {
