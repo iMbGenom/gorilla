@@ -6,12 +6,16 @@ func main() {
 	// cards = append(cards, "Six of Spades")
 	cards := newDeck()
 
+	hand, remainingCards := deal(cards, 5)
+	hand.print()
+	remainingCards.print()
+
 	// fmt.Println(cards)
 
 	// for i, card := range cards {
 	// 	fmt.Println(i, card)
 	// }
-	cards.print()
+	// cards.print()
 }
 
 // func newCard() string {
