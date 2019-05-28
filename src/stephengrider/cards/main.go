@@ -6,11 +6,11 @@ func main() {
 	// cards := []string{"Ace of Diamonds", newCard()}
 	// cards := deck{"Ace of Diamonds", newCard()}
 	// cards = append(cards, "Six of Spades")
-	cards := newDeck()
+	// cards := newDeck()
 
-	hand, remainingCards := deal(cards, 5)
-	hand.print()
-	remainingCards.print()
+	// hand, remainingCards := deal(cards, 5)
+	// hand.print()
+	// remainingCards.print()
 
 	// fmt.Println(cards)
 
@@ -20,8 +20,10 @@ func main() {
 	// cards.print()
 
 	/** Deck to string */
-	greeting := "Hi there!"
-	fmt.Println([]byte(greeting))
+	// greeting := "Hi there!"
+	// fmt.Println([]byte(greeting))
+	cards := newDeck()
+	fmt.Println(cards.toString())
 }
 
 // func newCard() string {
