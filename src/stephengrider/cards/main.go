@@ -23,7 +23,12 @@ func main() {
 	// cards := newDeck()
 	// fmt.Println(cards.toString())
 	// cards.saveToFile("my_cards.txt")
-	cards := newDeckFromFile("my_card.txt")
+	// cards := newDeckFromFile("my_card.txt")
+	// cards.print()
+
+	/** SHUFFLE */
+	cards := newDeck()
+	cards.shuffle()
 	cards.print()
 }
 
