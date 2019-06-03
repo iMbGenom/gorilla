@@ -35,9 +35,11 @@ func main() {
 
 	// jim.updateName("Jimbo")
 	// jim.print()
-	/** WITH POJNTER */
-	jimPointer := &jim
-	jimPointer.updateName("Jimbo")
+	/** WITH POJNTER DEFAULT */
+	// jimPointer := &jim
+	// jimPointer.updateName("Jimbo")
+	/** WITH POJNTER SHORTCUT */
+	jim.updateName("Jimbo")
 	jim.print()
 
 }
